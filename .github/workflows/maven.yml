@@ -15,7 +15,8 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v2
         with:
-          java-version: '1.8'
+          java-version: '11'
+          distribution: 'adopt'
       - name: Publish JAR
         run: ./mvnw -B release:prepare release:perform
         env:
